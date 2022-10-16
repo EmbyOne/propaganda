@@ -13,9 +13,8 @@ client = tweepy.Client(
 )
 
 # Create Tweet
+sonum = input("Sisesta tweet: ")
 
+response = client.create_tweet(text=sonum)
 
-response = client.create_tweet(
-    text="This Tweet was Tweeted using Tweepy and Twitter API v2!"
-)
 print(f"https://twitter.com/user/status/{response.data['id']}")
