@@ -4,10 +4,10 @@ services:
         build:
           context: .
           args:
-            consKey: "7PB5UQuirgRH57O4bf4syA5PF"
-            consSec: "FSirKOWN6464wLNKS4qN1beEsT7Zt2HnNcKiHdTxLJuibvnhcK"
-            accToken: "1242410377964662784-aIIKmjJp5Goqe4UlahHhtui4gR6cHr"
-            accTokenSec: "eVh52xP42iid1hLLwFMN7SwUhcDnbShR5TVLMwAhBCpyY"
+            consKey: ""
+            consSec: ""
+            accToken: ""
+            accTokenSec: ""
 
         ports: 
             # change only the first (external) port, internal doesn't matter
