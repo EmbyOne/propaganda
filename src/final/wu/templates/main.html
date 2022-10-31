@@ -1,0 +1,56 @@
+{% load static %}
+{% load tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Propaganda</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+    {% tailwind_preload_css %}
+    {% tailwind_css %}
+</head>
+
+<body class='bg-[#0c0c32]'>
+<img class="w-full h-screen -z-1 absolute" src="{% static 'img/bg.jpeg' %}">
+<p class='absolute text-white text-3xl font-semibold right-0 pr-4 pt-3'>Monke Propaganda</p>
+
+<div class="text-center text-white relative">
+
+
+
+
+<div class="pt-16">
+<img class='h-44 mx-auto border-[#24fbfe] border-2 rounded-md' src="{% static 'img/pfp.png' %}" alt='submitted image'>
+</div>
+
+
+<form class="h-24 mx-auto mt-3 w-[30%]" enctype="multipart/form-data" action ="" method ="post">
+    {% csrf_token %}
+    {{ form.message }}
+    <div class="flex justify-center p-2">
+        <button type="submit" class="border-4 border-blue-200 rounded-lg w-40 px-4 py-2 text-white bg-gray-900 shadow-xl transition duration-150 ease-out hover:scale-105">Submit</button>
+    </div>
+</form>
+
+
+{% if error %}
+<div class='mx-auto mt-16 bg-gray-900 opacity-90 border-4 border-blue-200 rounded-lg w-[60%] py-1'>
+    <p class=''>{{error}}</p>
+</div>
+{% endif %}
+
+
+{% if url %}
+<div class='mx-auto mt-16 bg-gray-900 opacity-90 border-4 border-blue-200 rounded-lg w-[60%] py-1'>
+    <p>Your message has been tweeted! Take a look: <a>{{url}}</a></p>
+</div>
+{% endif %}
+
+</div>
+
+</body>
+</html>
