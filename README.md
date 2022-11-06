@@ -16,7 +16,7 @@ Demos kasutatud twitteri bot: Twitteri bot: https://twitter.com/Deathsum1
 
 ## Kasutamine
 1. Lae repo alla
-2. Installeeri (docker)[https://www.docker.com/]
+2. Installeeri [docker](https://www.docker.com/)
 3. Navigeeri propaganda/src/final kausta
 4. Muuda docker-compose.yml sisu, lisades sinna oma twitter API salajased võtmed
 5. Loo docker container (`docker-compose up --build`)
